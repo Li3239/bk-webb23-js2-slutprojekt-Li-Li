@@ -1,0 +1,192 @@
+/* ************************************
+/* style for shopping cart
+/* ************************************
+/* Reset some default styles for the body and list */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.cart {
+    width: 600px;
+    padding: 10px;
+    /* set cart at a fixed position: ex.right up on the page */
+    position: fixed;
+    top: 0;
+    /* set a moving animation(transition) set the right position of div block far from right than the screen */
+    right: -100%;
+    /* min-width: 400px; */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Make sure it's above other content */
+    z-index: 100;
+    /* Add a transition effect for the 'right' property */
+    transition: right 0.6s ease-in-out;
+}
+
+/* Show the cart with a left-to-right transition effect */
+/* for classname="cart show" */
+.cart.show {
+    right: 0;
+}
+
+/* first line: such as "Varukorg", "❌" in the first line of the cart */
+.cart-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* "❌"button */
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-content-container {
+    /* Enable vertical scrolling start */
+    max-height: 60vh;
+    overflow-y: auto;
+    /* Enable vertical scrolling end*/
+}
+
+.cart-content {
+    width: 100%;
+    min-height: 250px;
+    /* margin: 10px; */
+    /* padding: 0 10px; */
+}
+
+.cart-title {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    /* padding: 5px 0; */
+}
+
+.cart-item {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #ddd; */
+    /* padding: 5px 0; */
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.cart-item img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    /* 添加垂直居中样式 */
+    /* vertical-align: middle; */
+}
+/* display 3:1:1:1 */
+.item-1, .item-title {
+    flex: 2;
+    text-align: center;
+}
+
+.item-1 {
+    flex: 1;
+}
+
+.quantity-selector {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    /* margin: auto; */
+    /* 水平居中 */
+    /* padding: 5px; */
+    /* 可以根据需要设置内边距 */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 5px; */
+}
+
+.decrease-button,
+.increase-button,
+.quantity-display {
+    flex: 1;
+    text-align: center;
+    /* margin: 1px; */
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* [+],[-] button disabled style setting */
+.decrease-button:disabled,
+.increase-button:disabled {
+    background-color: #bcc3be;
+    color: #565252;
+}
+
+.decrease-button,
+.increase-button {
+    background-color: #025813;
+    color: #fff;
+    border: none;
+    /* border-radius: 3px; */
+}
+
+.quantity-display {
+    /* background-color: #136d25; */
+    color: #136d25;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.clear-cart {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.clear-button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.total-amount {
+    font-weight: bold;
+}
+
+.payment-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payment-button button {
+    width: 100%;
+    background-color: #025813;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

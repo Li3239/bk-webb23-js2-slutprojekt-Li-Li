@@ -1,0 +1,143 @@
+/*******************************/
+/*  search bar                 */
+/*******************************/
+.search-main {
+    position: sticky;
+    top: 0px;
+    /* z-index: 50; */
+    padding: 24px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.search-container {
+    /* width: 100%; */
+    width: 96%;
+    max-width: 1404px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 16px;
+    padding-right: 16px; */
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.search-inner {
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+/* for [menu],[cart] style in search bar */
+.search-action-section {
+    flex-shrink: 0;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+/* .search-action-sub {
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    margin: -8px;
+} */
+
+.search-action-button {
+    position: relative;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    padding: 8px;
+    transform-origin: 50% 50% 0px;
+    transition: transform 200ms ease 0s, opacity 200ms ease 0s;
+}
+
+.search-action-icon {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* .search-action-button-span {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+} */
+
+.search-logo-section {
+    flex-shrink: 0;
+    padding: 0px 52px;
+    top: 16px;
+}
+
+.cart-item-count {
+    position: absolute;
+    /* 调整位置使其显示在购物车图标上方 */
+    top: -10px;
+    /* 调整位置使其显示在购物车图标右侧 */
+    right: -10px;
+    /* 设置背景颜色为红色 */
+    background-color: red;
+    /* 设置文本颜色为白色 */
+    color: white;
+    /* 圆形样式 */
+    border-radius: 50%;
+    /* 调整内边距 */
+    padding: 4px 8px;
+}
+
+a {
+    background-color: transparent;
+    color: currentcolor;
+    text-decoration: none;
+}
+
+.search-section {
+    flex: 1 1 auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    background-color: rgb(228, 228, 228);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 0px 24px;
+}
+
+.search-icon {
+    flex-shrink: 0;
+    cursor: default;
+    font-size: 20px;
+}
+
+.search-input {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 48px;
+    padding: 0px 0px 0px 12px;
+    background-color: transparent;
+    border: none !important;
+    /* no input element frame */
+    outline: none;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: inherit;
+    cursor: text;
+}
+
+/* when input backgroud-color is transparent 
+   need to set focus to */
+.search-input:focus {
+    /* outline: 0.01px solid white; */
+    /* 添加蓝色的边框或其他样式 */
+    /* 或者可以修改背景色以突出显示 */
+    background: rgb(226, 228, 228);
+}
+
+.is-right {
+    margin-left: auto;
+    padding-left: 100px;
+}

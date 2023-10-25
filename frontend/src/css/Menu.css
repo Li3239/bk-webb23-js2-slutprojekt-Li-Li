@@ -1,0 +1,84 @@
+/*******************************/
+/* Menu: includes searchBar, cart
+/*******************************/
+/* 水平菜单容器样式 */
+.horizontal-menu {
+    background-color: #ffffff;
+    /* 背景色 */
+    color: #383737;
+    /* 文字颜色 */
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.menu-div {
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1404px;
+    /* keep left */
+    margin-left: 10px;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.sort-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+}
+
+.sort-div button {
+    width: 120px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.sort-div h4 {
+    width: 120px;
+}
+
+/* 菜单项样式 */
+.horizontal-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    -moz-box-align: center;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    margin: 0px 0px;
+}
+
+.horizontal-menu li {
+    margin: 0 10px;
+    /* 左右外边距 */
+}
+
+/* 超链接样式 */
+.horizontal-menu a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    background-color: transparent;
+    color: currentcolor;
+    text-decoration: none;
+}
+
+/* 鼠标悬停效果 */
+.horizontal-menu a:hover {
+    text-decoration: underline;
+    /* 悬停时显示下划线 */
+    background-color: rgb(237, 234, 234);
+}
+

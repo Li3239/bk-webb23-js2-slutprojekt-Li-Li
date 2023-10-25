@@ -1,0 +1,102 @@
+.card-container {
+    display: grid;
+    padding: 10px;
+    /* 自动适应列宽auto-fit 创建一个自适应的网格布局，
+    列的宽度会自动调整以适应容器的宽度，但不会小于300像素，同时保持平均分配可用空间（1fr）的特性。*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* 水平居中 */
+    justify-items: center;
+}
+
+/* Style for each card */
+.card {
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    margin: 10 0px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+.card a {
+    width: 100%;
+    height: 60%;
+}
+
+.card img {
+    display: block;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    margin: 10px;
+    /* margin-bottom: 10px; */
+    object-fit: contain;
+    /* 添加垂直居中样式 */
+    /* vertical-align: middle; */
+}
+
+.card-content-container {
+    width: 100%;
+}
+
+/* for element [price] */
+.card-content-container h3 {
+    font-size: 18px;
+    color: red;
+}
+
+.card-content-container h4 {
+    font-size: 14px;
+    height: auto;
+    /* 控制溢出的文本隐藏 */
+    overflow: hidden;
+    /* 防止文本换行 */
+    white-space: nowrap;
+    /* 使用省略号表示溢出的文本 */
+    text-overflow: ellipsis;
+}
+
+.card-content-container h4:hover {
+    color: rgb(158, 37, 37);
+}
+
+/* .card a:hover {
+    background-color: #0056b3;
+} */
+
+.button-div {
+    display: grid;
+    /* 创建2列，每列等宽 */
+    grid-template-columns: repeat(auto-fit, 2fr);
+    /* 网格项之间的间隔 */
+    /* grid-gap: 10px; */
+    /* 水平居中对齐 */
+    /* justify-content: center; */
+    /* 垂直居中对齐 */
+    /* align-items: center; */
+    width: 100%;
+    /* 设置容器高度为自动 */
+    /* height: auto; */
+}
+
+.card button {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #025813;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* [Köp] button disabled style setting */
+.card button:disabled {
+    background-color: #bcc3be;
+    color: #565252;
+}
